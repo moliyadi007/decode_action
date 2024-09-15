@@ -1,557 +1,449 @@
-//Thu Sep 12 2024 05:18:33 GMT+0000 (Coordinated Universal Time)
+//Sun Sep 15 2024 02:39:02 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const bdy_0x2b2e6c = require("axios"),
-  bdy_0x481ad9 = require("https"),
-  bdy_0x553939 = require("crypto-js");
-class bdy_0x51f77c {
-  constructor() {}
-  TDEncrypt(_0x50e97e) {
-    _0x50e97e = JSON.stringify(_0x50e97e);
-    _0x50e97e = encodeURIComponent(_0x50e97e);
-    var _0x1f7cdb = "",
-      _0x39db93 = 0;
-    do {
-      var _0x33186b = _0x50e97e.charCodeAt(_0x39db93++),
-        _0x2a1d93 = _0x50e97e.charCodeAt(_0x39db93++),
-        _0x2dc1ec = _0x50e97e.charCodeAt(_0x39db93++),
-        _0x4f41df = _0x33186b >> 2;
-      _0x33186b = (_0x33186b & 3) << 4 | _0x2a1d93 >> 4;
-      var _0x84ea63 = (_0x2a1d93 & 15) << 2 | _0x2dc1ec >> 6,
-        _0x3e6399 = _0x2dc1ec & 63;
-      isNaN(_0x2a1d93) ? _0x84ea63 = _0x3e6399 = 64 : isNaN(_0x2dc1ec) && (_0x3e6399 = 64);
-      _0x1f7cdb += "23IL<N01c7KvwZO56RSTAfghiFyzWJqVabGH4PQdopUrsCuX*xeBjkltDEmn89.-".charAt(_0x4f41df) + "23IL<N01c7KvwZO56RSTAfghiFyzWJqVabGH4PQdopUrsCuX*xeBjkltDEmn89.-".charAt(_0x33186b) + "23IL<N01c7KvwZO56RSTAfghiFyzWJqVabGH4PQdopUrsCuX*xeBjkltDEmn89.-".charAt(_0x84ea63) + "23IL<N01c7KvwZO56RSTAfghiFyzWJqVabGH4PQdopUrsCuX*xeBjkltDEmn89.-".charAt(_0x3e6399);
-    } while (_0x39db93 < _0x50e97e.length);
-    return _0x1f7cdb + "/";
+NAME = "徐汇通";
+VALY = ["xhtck"];
+LOGS = 0;
+CK = "";
+var userList = [];
+usid = 0;
+class Bar {
+  constructor(_0x5eb019) {
+    this.o = _0x5eb019;
   }
-  async jddToken(_0x22233d, _0x52624d = "https://pro.m.jd.com/mall/active/3fcyrvLZALNPWCEDRvaZJVrzek8v/index.html", _0x32f9cf = "s") {
-    let _0x1e8bac = {
-        pin: "",
-        oid: "",
-        bizId: "jd-babelh5",
-        fc: "",
-        mode: "strict",
-        p: _0x32f9cf,
-        fp: "88233dc0b0cbdde7c72de37df22ed935",
-        ctype: 1,
-        v: "3.2.1.1",
-        f: "3",
-        o: _0x52624d.substring("https://".length),
-        qs: "",
-        jsTk: "",
-        qi: ""
+  async user() {
+    let _0x285a21 = {
+        "log-header": "I am the log request header.",
+        token: this.o
       },
-      _0x2035ac = this.getRandomInteger(393, 450),
-      _0x2e2ec4 = this.getRandomInteger(800, 900);
-    const _0x3a483f = {
-      tdHash: ""
-    };
-    const _0x5bb227 = {
-      compatMode: "CSS1Compat"
-    };
-    const _0x2e1bc8 = {
-      devicePixelRatio: 2.75,
-      screenTop: 0,
-      screenLeft: 0
-    };
-    const _0x275d4d = {
-      availHeight: _0x2e2ec4,
-      availWidth: _0x2035ac,
-      colorDepth: 24,
-      height: _0x2e2ec4,
-      width: _0x2035ac,
-      pixelDepth: 24
-    };
-    const _0x55b2c9 = {
-      cookie: true,
-      localStorage: true,
-      sessionStorage: true,
-      globalStorage: false,
-      indexedDB: true
-    };
-    let _0x33e90e = {
-        ts: {
-          deviceTime: new Date().getTime(),
-          deviceEndTime: new Date().getTime() + this.getRandomInteger(100, 200)
-        },
-        ca: _0x3a483f,
-        m: _0x5bb227,
-        fo: ["Bauhaus 93", "Casual"],
-        n: {
-          vendorSub: "",
-          productSub: "20030107",
-          vendor: "Apple Computer, Inc.",
-          maxTouchPoints: 1,
-          hardwareConcurrency: 8,
-          cookieEnabled: true,
-          appCodeName: "Mozilla",
-          appName: "Netscape",
-          appVersion: _0x22233d.split("M/")[1] || "",
-          platform: "NA",
-          product: "Gecko",
-          userAgent: _0x22233d,
-          language: "zh-CN",
-          onLine: true,
-          webdriver: false,
-          javaEnabled: false,
-          deviceMemory: 8,
-          enumerationOrder: ["vendorSub", "productSub", "vendor", "maxTouchPoints", "userActivation", "doNotTrack", "geolocation", "connection", "plugins", "mimeTypes", "webkitTemporaryStorage", "webkitPersistentStorage", "hardwareConcurrency", "cookieEnabled", "appCodeName", "appName", "appVersion", "platform", "product", "userAgent", "language", "languages", "onLine", "webdriver", "getBattery", "getGamepads", "javaEnabled", "sendBeacon", "vibrate", "scheduling", "mediaCapabilities", "locks", "wakeLock", "usb", "clipboard", "credentials", "keyboard", "mediaDevices", "storage", "serviceWorker", "deviceMemory", "bluetooth", "getUserMedia", "requestMIDIAccess", "requestMediaKeySystemAccess", "webkitGetUserMedia", "clearAppBadge", "setAppBadge"]
-        },
-        p: [],
-        w: _0x2e1bc8,
-        s: _0x275d4d,
-        sc: {
-          ActiveBorder: "rgb(118, 118, 118)",
-          ActiveCaption: "rgb(0, 0, 0)",
-          AppWorkspace: "rgb(255, 255, 255)",
-          Background: "rgb(255, 255, 255)",
-          ButtonFace: "rgb(239, 239, 239)",
-          ButtonHighlight: "rgb(239, 239, 239)",
-          ButtonShadow: "rgb(239, 239, 239)",
-          ButtonText: "rgb(0, 0, 0)",
-          CaptionText: "rgb(0, 0, 0)",
-          GrayText: "rgb(128, 128, 128)",
-          Highlight: "rgba(51, 181, 229, 0.4)",
-          HighlightText: "rgb(255, 255, 255)",
-          InactiveBorder: "rgb(118, 118, 118)",
-          InactiveCaption: "rgb(255, 255, 255)",
-          InactiveCaptionText: "rgb(128, 128, 128)",
-          InfoBackground: "rgb(255, 255, 255)",
-          InfoText: "rgb(0, 0, 0)",
-          Menu: "rgb(255, 255, 255)",
-          MenuText: "rgb(0, 0, 0)",
-          Scrollbar: "rgb(255, 255, 255)",
-          ThreeDDarkShadow: "rgb(118, 118, 118)",
-          ThreeDFace: "rgb(239, 239, 239)",
-          ThreeDHighlight: "rgb(118, 118, 118)",
-          ThreeDLightShadow: "rgb(118, 118, 118)",
-          ThreeDShadow: "rgb(118, 118, 118)",
-          Window: "rgb(255, 255, 255)",
-          WindowFrame: "rgb(118, 118, 118)",
-          WindowText: "rgb(0, 0, 0)"
-        },
-        ss: _0x55b2c9,
-        tz: -480,
-        lil: "",
-        wil: ""
+      _0x274ef3 = await task("post", "https://xhapi.shmedia.tech/media-basic-port/api/app/personal/get", _0x285a21);
+    this.name = _0x274ef3.data.nickname;
+    console.log("用户名：【" + this.name + "】==>现有积分：" + _0x274ef3.data.score);
+  }
+  async list() {
+    let _0x3985b1 = {
+        "log-header": "I am the log request header.",
+        token: this.o
       },
-      _0x99e59a = this.TDEncrypt(_0x33e90e),
-      _0x28073b = "https://gia.jd.com/jsTk.do?a=" + this.TDEncrypt(_0x1e8bac);
-    const _0x215b0a = {
-      d: _0x99e59a
-    };
-    const _0x36c9cb = {
-      d: _0x99e59a
-    };
-    let {
-      status: _0x264ac9,
-      data: _0x520ad1
-    } = await bdy_0x2b2e6c({
-      url: _0x28073b,
-      method: "POST",
-      data: Object.keys(_0x215b0a).map(_0x20829e => _0x20829e + "=" + encodeURIComponent(_0x36c9cb[_0x20829e])).join("&")
-    });
-    if (_0x264ac9 === 200 && _0x520ad1.data) {
-      return _0x520ad1.data;
-    } else {
-      return null;
-    }
-  }
-  get_agent() {
-    let _0x38e963 = "ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:DHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA256:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!SRP:!CAMELLIA";
-    const _0x3e9ca1 = {
-      ciphers: _0x38e963,
-      minVersion: "TLSv1.3"
-    };
-    return new bdy_0x481ad9.Agent(_0x3e9ca1);
-  }
-  cpstr = "TLS_AES_256_GCM_SHA384:TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384";
-  Check_Login(_0x5d0be3, _0xf41eb9) {
-    return new Promise(_0xfe608b => {
-      const _0x5082e2 = {
-        Cookie: _0x5d0be3,
-        referer: "https://h5.m.jd.com/",
-        "User-Agent": _0xf41eb9
-      };
-      const _0x20b1be = {
-        url: "https://plogin.m.jd.com/cgi-bin/ml/islogin",
-        headers: _0x5082e2,
-        timeout: 10000
-      };
-      $.get(_0x20b1be, (_0x5134cb, _0x51c977, _0x1715f0) => {
-        try {
-          if (_0x1715f0) {
-            _0x1715f0 = JSON.parse(_0x1715f0);
-            if (!(_0x1715f0.islogin === "1")) {
-              _0x1715f0.islogin === "0" && ($.isLogin = false);
-            }
-          }
-        } catch (_0x34d9de) {
-          console.log(_0x34d9de);
-        } finally {
-          _0xfe608b();
+      _0x130ddb = await task("post", "https://xhapi.shmedia.tech/media-basic-port/api/app/personal/score/info", _0x3985b1),
+      _0x1c3304 = _0x130ddb.data.jobs,
+      _0x381d78 = _0x1c3304[1].progress,
+      _0x196a51 = _0x1c3304[1].totalProgress,
+      _0x522de9 = _0x1c3304[2].progress,
+      _0x450da9 = _0x1c3304[2].totalProgress;
+    if (_0x130ddb.data.jobs) {
+      _0x1c3304[1].status == 0 ? await this.signin() : console.log("【" + this.name + "】签到任务已完成，请勿重复运行脚本");
+      if (_0x1c3304[1].status == 0) {
+        for (let _0x181682 = _0x381d78; _0x181682 < _0x196a51; _0x181682++) {
+          await this.read();
         }
-      });
-    });
-  }
-  Get_Code() {
-    const _0x566411 = {
-      url: "",
-      timeout: 30000
-    };
-    return new Promise(_0x5079b1 => {
-      $.get(_0x566411, async (_0x477cec, _0x11477c, _0xed1894) => {
-        try {
-          if (_0x477cec) {
-            console.log("\n服务连接失败，终止执行！");
-            process.exit(111);
-          } else {
-            if (_0xed1894) {
-              _0xed1894 = JSON.parse(_0xed1894);
-              if (_0xed1894.code === 200) {
-                authcode = _0xed1894.data;
-              }
-            }
-          }
-        } catch (_0x35808a) {
-          $.logErr(_0x35808a, _0x11477c);
-        } finally {
-          _0x5079b1(authcode);
-        }
-      });
-    });
-  }
-  getRandomInteger(_0x534c48, _0x259b9a) {
-    return Math.floor(Math.random() * (_0x259b9a - _0x534c48 + 1)) + _0x534c48;
-  }
-  Format_Date(_0x33e219) {
-    _0x33e219 = new Date(_0x33e219);
-    const _0x37ba83 = _0x33e219.getFullYear(),
-      _0x4442b4 = ("0" + (_0x33e219.getMonth() + 1)).slice(-2),
-      _0x4b09a6 = ("0" + _0x33e219.getDate()).slice(-2),
-      _0x22b199 = ("0" + _0x33e219.getHours()).slice(-2),
-      _0x21d405 = ("0" + _0x33e219.getMinutes()).slice(-2),
-      _0x5c74c2 = ("0" + _0x33e219.getSeconds()).slice(-2);
-    return _0x37ba83 + "/" + _0x4442b4 + "/" + _0x4b09a6 + " " + _0x22b199 + ":" + _0x21d405 + ":" + _0x5c74c2;
-  }
-  jsonfomat(_0x199fa8) {
-    if (typeof _0x199fa8 == "string") {
-      try {
-        return JSON.parse(_0x199fa8);
-      } catch (_0x471375) {
-        console.log(_0x471375);
-        $.msg($.name, "", "请勿随意在BoxJs输入框修改内容\n建议通过脚本去获取cookie");
-        return [];
-      }
-    }
-  }
-  aesDecrypt(_0x507068) {
-    let _0x36f1e2 = bdy_0x553939.enc.Utf8.parse("40d9d9a0b49d1384"),
-      _0x2d04e1 = bdy_0x553939.enc.Utf8.parse("1111111111111111"),
-      _0x47ed86 = bdy_0x553939.enc.Hex.parse(_0x507068),
-      _0x1e4df1 = bdy_0x553939.enc.Base64.stringify(_0x47ed86),
-      _0x614bc5 = bdy_0x553939.AES.decrypt(_0x1e4df1, _0x36f1e2, {
-        iv: _0x2d04e1,
-        mode: bdy_0x553939.mode.CBC,
-        padding: bdy_0x553939.pad.Pkcs7
-      }),
-      _0x53e8a7 = _0x614bc5.toString(bdy_0x553939.enc.Utf8);
-    return _0x53e8a7.toString();
-  }
-  aesEncrypt(_0x47b4ba) {
-    let _0x3c11f1 = bdy_0x553939.enc.Utf8.parse("40d9d9a0b49d1384"),
-      _0x190ea7 = bdy_0x553939.enc.Utf8.parse(_0x47b4ba),
-      _0x39d64a = bdy_0x553939.AES.encrypt(_0x190ea7, _0x3c11f1, {
-        iv: bdy_0x553939.enc.Utf8.parse("1111111111111111".substr(0, 16)),
-        mode: bdy_0x553939.mode.CBC,
-        padding: bdy_0x553939.pad.Pkcs7
-      });
-    return _0x39d64a.ciphertext.toString();
-  }
-  getUA_bak() {
-    const _0x3cc0ac = {
-      A: "K",
-      B: "L",
-      C: "M",
-      D: "N",
-      E: "O",
-      F: "P",
-      G: "Q",
-      H: "R",
-      I: "S",
-      J: "T",
-      K: "A",
-      L: "B",
-      M: "C",
-      N: "D",
-      O: "E",
-      P: "F",
-      Q: "G",
-      R: "H",
-      S: "I",
-      T: "J",
-      e: "o",
-      f: "p",
-      g: "q",
-      h: "r",
-      i: "s",
-      j: "t",
-      k: "u",
-      l: "v",
-      m: "w",
-      n: "x",
-      o: "e",
-      p: "f",
-      q: "g",
-      r: "h",
-      s: "i",
-      t: "j",
-      u: "k",
-      v: "l",
-      w: "m",
-      x: "n"
-    };
-    let _0x32af83 = ["MI9 Build/QKQ1.190825.002", "MI8 Build/OPM1.171019.026", "HLK-AL00 Build/HONORHLK-AL00", "SM-G9750 Build/QP1A.190711.020", "LIO-AL00 Build/HUAWEILIO-AL00", "ELE-AL00 Build/HUAWEIELE-AL00", "ANE-AL00 Build/HUAWEIANE-AL00", "22021211RC Build/SKQ1.211006.001"],
-      _0xc74e0b = ["9", "10", "11", "12", "13"],
-      _0x5af8d3 = ["11.2.8", "11.2.6", "11.2.5", "11.2.4", "11.2.3", "11.1.4", "11.1.3", "11.2.0", "11.3.0"],
-      _0x4d76a7 = ["98413", "98416", "98415", "98417", "98450", "98527"];
-    $.dv = _0x32af83[Math.floor(Math.random() * _0x32af83.length)];
-    $.iv = _0xc74e0b[Math.floor(Math.random() * _0xc74e0b.length)];
-    $.av = _0x5af8d3[Math.floor(Math.random() * _0x5af8d3.length)];
-    $.bv = _0x4d76a7[Math.floor(Math.random() * _0x4d76a7.length)];
-    getstr = function (_0x4d5c17) {
-      let _0x2818e8 = "",
-        _0xe2bf05 = "0123456789abcdef";
-      for (let _0x4f4156 = 0; _0x4f4156 < _0x4d5c17; _0x4f4156++) {
-        let _0x5df0cc = Math.round(Math.random() * (_0xe2bf05.length - 1));
-        _0x2818e8 += _0xe2bf05.substring(_0x5df0cc, _0x5df0cc + 1);
-      }
-      return _0x2818e8;
-    };
-    let _0x3a2610 = Buffer.from(getstr(16)).toString("base64"),
-      _0x56a058 = Buffer.from(getstr(16)).toString("base64"),
-      _0x3468cf = Buffer.from($.iv).toString("base64").split("").map(_0x2bf4bb => _0x3cc0ac[_0x2bf4bb] || _0x2bf4bb).join(""),
-      _0xb16e0 = Buffer.from("31").toString("base64").split("").map(_0x4fa796 => _0x3cc0ac[_0x4fa796] || _0x4fa796).join("");
-    _0x56a058 = _0x56a058.split("").map(_0x30c36c => _0x3cc0ac[_0x30c36c] || _0x30c36c).join("");
-    _0x3a2610 = _0x3a2610.split("").map(_0x135e22 => _0x3cc0ac[_0x135e22] || _0x135e22).join("");
-    const _0x244265 = {
-      sv: _0x3468cf,
-      ad: _0x3a2610,
-      od: _0x56a058,
-      ov: _0xb16e0,
-      ud: _0x3a2610
-    };
-    let _0xaec8dc = encodeURIComponent(JSON.stringify({
-      hdid: "JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw=",
-      ts: Date.now(),
-      ridx: -1,
-      cipher: _0x244265,
-      ciphertype: 5,
-      version: "1.2.0",
-      appname: "com.jingdong.app.mall"
-    }));
-    $.UA = "jdapp;android;" + $.av + ";;;appBuild/" + $.bv + ";ef/1;ep/" + _0xaec8dc + ";jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android " + $.iv + "; " + $.dv + "; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046141 Mobile Safari/537.36";
-  }
-  uuid(_0x2112a9) {
-    let _0x185f04 = "0123456789abcdef",
-      _0x38b299 = "";
-    for (let _0x41be83 = 0; _0x41be83 < _0x2112a9; _0x41be83++) {
-      _0x38b299 += _0x185f04[Math.ceil(100000000 * Math.random()) % _0x185f04.length];
-    }
-    return _0x38b299;
-  }
-  UUID(_0x7d2f69 = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", _0xea6688 = 0) {
-    let _0xbd3099 = "";
-    return _0x7d2f69.replace(/[xy]/g, function (_0xbaf471) {
-      var _0x1e9899 = Math.random() * 16 | 0,
-        _0x27b285 = _0xbaf471 == "x" ? _0x1e9899 : _0x1e9899 & 3 | 8;
-      if (_0xea6688) {
-        _0xbd3099 = _0x27b285.toString(36).toUpperCase();
       } else {
-        _0xbd3099 = _0x27b285.toString(36);
+        console.log("【" + this.name + "】阅读任务已完成，请勿重复运行脚本");
       }
-      return _0xbd3099;
-    });
-  }
-  jsonParse(_0x1015ff) {
-    try {
-      _0x1015ff = JSON.parse(_0x1015ff);
-    } catch (_0x573a05) {
-      let _0x2bc3f2 = match([/^try\s*\{\s*\n*\s*(\w+)/, /^(\w+)\s*\n*\s*\(/], _0x1015ff);
-      if (_0x2bc3f2) {
-        let _0x4e1a08 = "",
-          _0x310df9 = _0x1015ff.replace(_0x2bc3f2, "tempdata=");
-        eval(_0x310df9);
-        _0x4e1a08 && (_0x1015ff = _0x4e1a08);
-      }
-    }
-    return _0x1015ff;
-  }
-  dymatch(_0x57e867, _0x37046e) {
-    _0x57e867 = _0x57e867 instanceof Array ? _0x57e867 : [_0x57e867];
-    for (let _0x26ba15 of _0x57e867) {
-      let _0x4c02cf = _0x26ba15.exec(_0x37046e);
-      if (_0x4c02cf) {
-        let _0x5b19ce = _0x4c02cf.length;
-        if (_0x5b19ce == 1) {
-          return _0x4c02cf;
-        } else {
-          if (_0x5b19ce == 2) {
-            return _0x4c02cf[1];
-          } else {
-            let _0x1d49a3 = [];
-            for (let _0xb0aeac = 1; _0xb0aeac < _0x5b19ce; _0xb0aeac++) {
-              _0x1d49a3.push(_0x4c02cf[_0xb0aeac]);
-            }
-            return _0x1d49a3;
-          }
+      if (_0x1c3304[2].status == 0) {
+        for (let _0xb22f85 = _0x522de9; _0xb22f85 < _0x450da9; _0xb22f85++) {
+          await this.video();
         }
+      } else {
+        console.log("【" + this.name + "】视频任务已完成，请勿重复运行脚本");
       }
+    } else {
+      console.log("【" + this.name + "】未找到任务列表，请检查变量是否正确");
     }
-    return "";
   }
-  getExtract(_0x11121f) {
-    const _0x4ee5a7 = (_0xdca539, _0xa7918d) => Math.floor(Math.random() * (_0xa7918d - _0xdca539) + _0xdca539);
-    let _0x187cc0 = _0x4ee5a7(0, _0x11121f.length);
-    return _0x11121f.splice(_0x187cc0, 1);
+  async read() {
+    let _0x4d7cae = {
+        token: this.o
+      },
+      _0x3e0241 = "{}",
+      _0x52c57e = await task("post", "https://xhapi.shmedia.tech/media-basic-port/api/app/points/read/add", _0x4d7cae, _0x3e0241);
+    _0x52c57e.code == 0 ? (console.log("【" + this.name + "】阅读 成功"), await wait(15000)) : (console.log("【" + this.name + "】阅读 " + _0x52c57e.msg), await wait(5000));
   }
-  getRandomEle(_0x35a855, _0x8d8da0) {
-    const _0x1f32bf = _0x35a855.slice().sort(() => Math.random() - 0.5);
-    return _0x1f32bf.slice(0, _0x8d8da0);
+  async video() {
+    let _0x88d852 = {
+        token: this.o
+      },
+      _0x4c98a5 = "{}",
+      _0x469bb7 = await task("post", "https://xhapi.shmedia.tech/media-basic-port/api/app/points/video/add", _0x88d852, _0x4c98a5);
+    _0x469bb7.code == 0 ? (console.log("【" + this.name + "】看视频 成功"), await wait(15000)) : (console.log("【" + this.name + "】看视频 " + _0x469bb7.msg), await wait(5000));
   }
-  SecToTime(_0x3752b8) {
-    const _0x149a53 = Math.floor(_0x3752b8 / 3600),
-      _0x56ed81 = Math.floor(_0x3752b8 % 3600 / 60),
-      _0x4d14d0 = _0x3752b8 % 60;
-    return _0x149a53 + "小时" + _0x56ed81 + "分" + _0x4d14d0 + "秒";
-  }
-  chanel() {
-    console.log("问题反馈 => https://t.me/dylan_jdpro");
-  }
-  getUA(_0x56c633, _0x4ff450) {
-    const _0x16598d = {
-      A: "K",
-      B: "L",
-      C: "M",
-      D: "N",
-      E: "O",
-      F: "P",
-      G: "Q",
-      H: "R",
-      I: "S",
-      J: "T",
-      K: "A",
-      L: "B",
-      M: "C",
-      N: "D",
-      O: "E",
-      P: "F",
-      Q: "G",
-      R: "H",
-      S: "I",
-      T: "J",
-      e: "o",
-      f: "p",
-      g: "q",
-      h: "r",
-      i: "s",
-      j: "t",
-      k: "u",
-      l: "v",
-      m: "w",
-      n: "x",
-      o: "e",
-      p: "f",
-      q: "g",
-      r: "h",
-      s: "i",
-      t: "j",
-      u: "k",
-      v: "l",
-      w: "m",
-      x: "n"
-    };
-    const _0x88e513 = {
-      ud: "",
-      sv: "",
-      iad: ""
-    };
-    let _0x3c1a4a = this.getRandomEle([12, 13, 14, 15, 16], 1) + "." + this.getRandomEle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 1) + "." + this.getRandomEle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 1),
-      _0x7a044c = this.getRandomEle([12], 1) + "." + this.getRandomEle([0, 1, 2, 3, 4, 5, 6, 7, 8], 1) + "." + this.getRandomEle([0, 1, 2, 3, 4, 5], 1),
-      _0x10b633 = this.getRandomEle([4, 5, 6], 1) + "." + this.getRandomEle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 1) + "." + this.getRandomEle([0, 1, 2, 3, 4, 5], 1),
-      _0x10124b = {
-        ciphertype: 5,
-        cipher: _0x88e513,
-        ts: parseInt(new Date().getTime() / 1000),
-        hdid: "",
-        version: "1.0.3",
-        appname: "",
-        ridx: -1
-      };
-    _0x10124b.cipher.sv = new Buffer.from(_0x3c1a4a).toString("base64").split("").map(_0x42048c => _0x16598d[_0x42048c] || _0x42048c).join("");
-    _0x10124b.cipher.ud = new Buffer.from(bdy_0x553939.SHA1(_0x4ff450).toString() || this.uuid(40)).toString("base64").split("").map(_0x13927c => _0x16598d[_0x13927c] || _0x13927c).join("");
-    _0x10124b.appname = "com.360buy.jdmobile";
-    _0x10124b.hdid = "JM9F1ywUPwflvMIpYPok0tt5k9kW4ArJEU3lfLhxBqw=";
-    let _0x2e1df9 = "jdapp;iPhone;" + _0x7a044c + ";;;M/5.0;appBuild/168841;jdSupportDarkMode/0;ef/1;ep/" + encodeURIComponent(JSON.stringify(_0x10124b)) + ";Mozilla/5.0 (iPhone; CPU iPhone OS " + _0x3c1a4a.replace(/\./g, "_") + " like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;";
-    _0x10124b.appname = "com.jd.jdmobilelite";
-    _0x10124b.hdid = "ViZLFbOc+bY6wW3m9/8iSFjgglIbmHPOGSM9aXIoBes=";
-    _0x10124b.ridx = 1;
-    let _0x1e073d = "jdltapp;iPhone;" + _0x10b633 + ";;;M/5.0;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;hasOCPay/0;appBuild/1338;supportBestPay/0;jdSupportDarkMode/0;ef/1;ep/" + encodeURIComponent(JSON.stringify(_0x10124b)) + ";Mozilla/5.0 (iPhone; CPU iPhone OS " + _0x3c1a4a.replace(/\./g, "_") + " like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;";
-    return _0x56c633 ? _0x1e073d : _0x2e1df9;
-  }
-  buildck(_0x131814) {
-    let _0x353720 = "",
-      _0x5c7046 = "jd.com",
-      _0x55c301 = 15552000000,
-      _0x55880a = 1800000,
-      _0x3cca6b = _0x5e1ca5(_0x5c7046),
-      _0x4356ad = _0x2ad259(),
-      _0x4488f5 = parseInt(new Date().getTime() / 1000),
-      _0x48554c = _0x4356ad;
-    function _0x2ad259() {
-      return new Date().getTime() + "" + parseInt(2147483647 * Math.random());
-    }
-    function _0x46f019(_0x1f2f39, _0x16aa34, _0x2e4aad, _0x17d873) {
-      if (_0x1f2f39) {
-        var _0x4658da = "";
-        if (_0x17d873) {
-          var _0x345885 = new Date();
-          _0x345885.setTime(_0x345885.getTime() + _0x17d873);
-          _0x4658da = ";expires=" + _0x345885.toGMTString();
-        }
-        _0x353720 += _0x1f2f39 + "=" + _0x16aa34 + ";";
-      }
-    }
-    function _0x5e1ca5(_0x1b1c5e) {
-      let _0x169d8f,
-        _0x1e2563 = 1,
-        _0x243869 = 0;
-      if (_0x1b1c5e) {
-        for (_0x1e2563 = 0, _0x169d8f = _0x1b1c5e.length - 1; 0 <= _0x169d8f; _0x169d8f--) {
-          _0x1e2563 = 0 !== (_0x243869 = 266338304 & (_0x1e2563 = (_0x1e2563 << 6 & 268435455) + (_0x243869 = _0x1b1c5e.charCodeAt(_0x169d8f)) + (_0x243869 << 14))) ? _0x1e2563 ^ _0x243869 >> 21 : _0x1e2563;
-        }
-      }
-      return _0x1e2563;
-    }
-    function _0x414bbf(_0x418de6, _0xfb8416) {
-      _0x418de6 = encodeURIComponent([_0xfb8416, "direct", "-", "none", "-", new Date().getTime()].join("|"));
-      let _0x4d2a0d = _0x1a32e6(10) && (!_0x418de6 || 400 < _0x418de6.length) ? _0xfb8416 + "|direct|-|none|-|" + new Date().getTime() : _0x418de6;
-      _0x46f019("__jdv", _0x4d2a0d, _0x5c7046, 86400000);
-    }
-    function _0x1a32e6(_0x209d4e) {
-      if (100 <= _0x209d4e) {
-        return !0;
-      }
-      let _0x1bfeb9 = _0x48554c,
-        _0x465483 = _0x1bfeb9.substr(_0x1bfeb9.length - 2);
-      return !!_0x465483 && 1 * _0x465483 < _0x209d4e;
-    }
-    _0x46f019("__jda", [_0x3cca6b, _0x4356ad, _0x4488f5, _0x4488f5, _0x4488f5, 1 || 1].join("."), _0x5c7046, _0x55c301);
-    _0x46f019("__jdb", [_0x3cca6b, 1, _0x4356ad + "|" + 1, _0x4488f5].join("."), _0x5c7046, _0x55880a);
-    _0x414bbf("", _0x3cca6b);
-    _0x46f019("__jdc", _0x3cca6b, _0x5c7046);
-    _0x46f019("mba_muid", encodeURI(_0x4356ad), _0x5c7046);
-    return _0x131814 + ";" + _0x353720;
+  async signin() {
+    let _0x56ef6f = "{}",
+      _0x4da3f0 = {
+        "log-header": "I am the log request header.",
+        token: this.o
+      },
+      _0xbd6472 = await task("post", "https://xhapi.shmedia.tech/media-basic-port/api/app/personal/score/sign", _0x4da3f0, _0x56ef6f);
+    _0xbd6472.code == 0 ? (console.log("【" + this.name + "】 签到 成功"), await wait(5000)) : (console.log("【" + this.name + "】签到 " + _0xbd6472.msg), await wait(5000));
   }
 }
-module.exports = new bdy_0x51f77c();
+!(async () => {
+  console.log(NAME);
+  console.log("美食交流频道(限100人):https://t.me/+aWGAAS6TCLQ3Yzk1");
+  checkEnv();
+  for (let _0x3abfd7 of userList) {
+    await _0x3abfd7.user();
+    await _0x3abfd7.list();
+  }
+})().catch(_0xc932c9 => {
+  console.log(_0xc932c9);
+}).finally(() => {});
+function RT(_0x3078ed, _0x578299) {
+  return Math.round(Math.random() * (_0x578299 - _0x3078ed) + _0x3078ed);
+}
+function times(_0x356832) {
+  if (_0x356832 == 10) {
+    let _0x103bec = Math.round(new Date().getTime() / 1000).toString();
+    return _0x103bec;
+  } else {
+    let _0x2f493c = new Date().getTime();
+    return _0x2f493c;
+  }
+}
+async function task(_0x26a10f, _0x4ba40d, _0x329ce9, _0x3a2de4) {
+  _0x26a10f == "delete" ? _0x26a10f = _0x26a10f.toUpperCase() : _0x26a10f = _0x26a10f;
+  const _0x447462 = require("request");
+  _0x26a10f == "post" && (delete _0x329ce9["content-type"], delete _0x329ce9["Content-type"], delete _0x329ce9["content-Type"], safeGet(_0x3a2de4) ? _0x329ce9["Content-Type"] = "application/json;charset=UTF-8" : _0x329ce9["Content-Type"] = "application/x-www-form-urlencoded", _0x3a2de4 && (_0x329ce9["Content-Length"] = lengthInUtf8Bytes(_0x3a2de4)));
+  _0x329ce9.Host = _0x4ba40d.replace("//", "/").split("/")[1];
+  if (_0x26a10f.indexOf("T") < 0) {
+    var _0x522028 = {
+      url: _0x4ba40d,
+      headers: _0x329ce9,
+      body: _0x3a2de4
+    };
+  } else {
+    var _0x522028 = {
+      url: _0x4ba40d,
+      headers: _0x329ce9,
+      form: JSON.parse(_0x3a2de4)
+    };
+  }
+  return new Promise(async _0x100ce4 => {
+    _0x447462[_0x26a10f.toLowerCase()](_0x522028, (_0x28847f, _0x179140, _0x2fb0e6) => {
+      try {
+        LOGS == 1 && (console.log("==================请求=================="), console.log(_0x522028), console.log("==================返回=================="), console.log(JSON.parse(_0x2fb0e6)));
+      } catch (_0xdc786f) {} finally {
+        !_0x28847f ? safeGet(_0x2fb0e6) ? _0x2fb0e6 = JSON.parse(_0x2fb0e6) : _0x2fb0e6 = _0x2fb0e6 : _0x2fb0e6 = _0x4ba40d + "   API请求失败，请检查网络重试\n" + _0x28847f;
+        return _0x100ce4(_0x2fb0e6);
+      }
+    });
+  });
+}
+function SJS(_0x379269) {
+  _0x379269 = _0x379269 || 32;
+  var _0x5f2e6e = "1234567890",
+    _0x478b2d = _0x5f2e6e.length,
+    _0x4ba75f = "";
+  for (i = 0; i < _0x379269; i++) {
+    _0x4ba75f += _0x5f2e6e.charAt(Math.floor(Math.random() * _0x478b2d));
+  }
+  return _0x4ba75f;
+}
+function SJSxx(_0x316cf7) {
+  _0x316cf7 = _0x316cf7 || 32;
+  var _0x1b17f0 = "abcdefghijklmnopqrstuvwxyz1234567890",
+    _0x3d611c = _0x1b17f0.length,
+    _0x3b58ff = "";
+  for (i = 0; i < _0x316cf7; i++) {
+    _0x3b58ff += _0x1b17f0.charAt(Math.floor(Math.random() * _0x3d611c));
+  }
+  return _0x3b58ff;
+}
+function safeGet(_0x392677) {
+  try {
+    if (typeof JSON.parse(_0x392677) == "object") {
+      return true;
+    }
+  } catch (_0x13b392) {
+    return false;
+  }
+}
+function lengthInUtf8Bytes(_0x3776ea) {
+  let _0x2dadf7 = encodeURIComponent(_0x3776ea).match(/%[89ABab]/g);
+  return _0x3776ea.length + (_0x2dadf7 ? _0x2dadf7.length : 0);
+}
+async function checkEnv() {
+  let _0x4ff7ef = process.env[VALY] || CK,
+    _0x54c125 = 0;
+  if (_0x4ff7ef) {
+    for (let _0x387beb of _0x4ff7ef.split("&").filter(_0x431150 => !!_0x431150)) {
+      userList.push(new Bar(_0x387beb));
+    }
+    _0x54c125 = userList.length;
+  } else {
+    console.log("\n【" + NAME + "】：未填写变量: " + VALY);
+  }
+  console.log("共找到" + _0x54c125 + "个账号");
+  return userList;
+}
+function wait(_0x415d8e) {
+  return new Promise(_0x254421 => setTimeout(_0x254421, _0x415d8e));
+}
+function stringToBase64(_0x560c5d) {
+  var _0x50da62 = Buffer.from(_0x560c5d).toString("base64");
+  return _0x50da62;
+}
+function EncryptCrypto(_0x1b0400, _0x134d7d, _0x98ffdf, _0x1d01e6, _0x3d7e31, _0x4320ed) {
+  const _0x62e54a = require("crypto-js"),
+    _0x4ab3ec = _0x62e54a.enc.Utf8.parse(_0x1d01e6),
+    _0x4fa8de = _0x62e54a.enc.Utf8.parse(_0x4320ed),
+    _0x4cc728 = _0x62e54a.enc.Utf8.parse(_0x3d7e31),
+    _0x4ad4e0 = _0x62e54a[_0x1b0400].encrypt(_0x4ab3ec, _0x4cc728, {
+      iv: _0x4fa8de,
+      mode: _0x62e54a.mode[_0x134d7d],
+      padding: _0x62e54a.pad[_0x98ffdf]
+    });
+  return _0x4ad4e0.toString();
+}
+function DecryptCrypto(_0x34d2fd, _0x3c766b, _0x27a2db, _0x5b5d24, _0x17f49c, _0x4d3604) {
+  const _0x306efa = require("crypto-js"),
+    _0x227c49 = _0x306efa.enc.Utf8.parse(_0x4d3604),
+    _0x106a5e = _0x306efa.enc.Utf8.parse(_0x17f49c),
+    _0xf295ee = _0x306efa[_0x34d2fd].decrypt(_0x5b5d24, _0x106a5e, {
+      iv: _0x227c49,
+      mode: _0x306efa.mode[_0x3c766b],
+      padding: _0x306efa.pad[_0x27a2db]
+    });
+  return _0xf295ee.toString(_0x306efa.enc.Utf8);
+}
+function RSA(_0x21ae4a, _0x3bfdb2) {
+  const _0x256b27 = require("node-rsa");
+  let _0x3a7f96 = new _0x256b27("-----BEGIN PUBLIC KEY-----\n" + _0x3bfdb2 + "\n-----END PUBLIC KEY-----");
+  _0x3a7f96.setOptions({
+    encryptionScheme: "pkcs1"
+  });
+  return _0x3a7f96.encrypt(_0x21ae4a, "base64", "utf8");
+}
+function SHA1_Encrypt(_0x1379ae) {
+  return CryptoJS.SHA1(_0x1379ae).toString();
+}
+function SHA256(_0x433876) {
+  const _0x3f01bf = 8,
+    _0x5782f1 = 0;
+  function _0x3f6578(_0x29bba6, _0x4b3bd6) {
+    const _0x4ea578 = (65535 & _0x29bba6) + (65535 & _0x4b3bd6);
+    return (_0x29bba6 >> 16) + (_0x4b3bd6 >> 16) + (_0x4ea578 >> 16) << 16 | 65535 & _0x4ea578;
+  }
+  function _0x1b1861(_0x2d5cf5, _0x46d0d2) {
+    return _0x2d5cf5 >>> _0x46d0d2 | _0x2d5cf5 << 32 - _0x46d0d2;
+  }
+  function _0x3845e2(_0x59e759, _0x2f89b7) {
+    return _0x59e759 >>> _0x2f89b7;
+  }
+  function _0x4149da(_0x7522d2, _0x5937d6, _0x3e9811) {
+    return _0x7522d2 & _0x5937d6 ^ ~_0x7522d2 & _0x3e9811;
+  }
+  function _0x1013f8(_0x20e75b, _0x4b7a8c, _0x413ca7) {
+    return _0x20e75b & _0x4b7a8c ^ _0x20e75b & _0x413ca7 ^ _0x4b7a8c & _0x413ca7;
+  }
+  function _0x2447b8(_0x17ee88) {
+    return _0x1b1861(_0x17ee88, 2) ^ _0x1b1861(_0x17ee88, 13) ^ _0x1b1861(_0x17ee88, 22);
+  }
+  function _0x20edf0(_0x190d34) {
+    return _0x1b1861(_0x190d34, 6) ^ _0x1b1861(_0x190d34, 11) ^ _0x1b1861(_0x190d34, 25);
+  }
+  function _0x3badfa(_0x1b1510) {
+    return _0x1b1861(_0x1b1510, 7) ^ _0x1b1861(_0x1b1510, 18) ^ _0x3845e2(_0x1b1510, 3);
+  }
+  return function (_0x1cf7ef) {
+    const _0x29522b = _0x5782f1 ? "0123456789ABCDEF" : "0123456789abcdef";
+    let _0x5cd60a = "";
+    for (let _0x10bb3e = 0; _0x10bb3e < 4 * _0x1cf7ef.length; _0x10bb3e++) {
+      _0x5cd60a += _0x29522b.charAt(_0x1cf7ef[_0x10bb3e >> 2] >> 8 * (3 - _0x10bb3e % 4) + 4 & 15) + _0x29522b.charAt(_0x1cf7ef[_0x10bb3e >> 2] >> 8 * (3 - _0x10bb3e % 4) & 15);
+    }
+    return _0x5cd60a;
+  }(function (_0x309098, _0x423154) {
+    const _0x2ed972 = [1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298],
+      _0xdc94e9 = [1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225],
+      _0x3058f3 = new Array(64);
+    let _0x536e12, _0x1ea553, _0x22eb7b, _0x152bc6, _0xee8c1b, _0x26eea9, _0x548d2a, _0x44c5da, _0x67ac94, _0x5cb723, _0x42105d, _0x47da18;
+    for (_0x309098[_0x423154 >> 5] |= 128 << 24 - _0x423154 % 32, _0x309098[15 + (_0x423154 + 64 >> 9 << 4)] = _0x423154, _0x67ac94 = 0; _0x67ac94 < _0x309098.length; _0x67ac94 += 16) {
+      for (_0x536e12 = _0xdc94e9[0], _0x1ea553 = _0xdc94e9[1], _0x22eb7b = _0xdc94e9[2], _0x152bc6 = _0xdc94e9[3], _0xee8c1b = _0xdc94e9[4], _0x26eea9 = _0xdc94e9[5], _0x548d2a = _0xdc94e9[6], _0x44c5da = _0xdc94e9[7], _0x5cb723 = 0; _0x5cb723 < 64; _0x5cb723++) {
+        _0x3058f3[_0x5cb723] = _0x5cb723 < 16 ? _0x309098[_0x5cb723 + _0x67ac94] : _0x3f6578(_0x3f6578(_0x3f6578(_0x1b1861(_0x13ff49 = _0x3058f3[_0x5cb723 - 2], 17) ^ _0x1b1861(_0x13ff49, 19) ^ _0x3845e2(_0x13ff49, 10), _0x3058f3[_0x5cb723 - 7]), _0x3badfa(_0x3058f3[_0x5cb723 - 15])), _0x3058f3[_0x5cb723 - 16]);
+        _0x42105d = _0x3f6578(_0x3f6578(_0x3f6578(_0x3f6578(_0x44c5da, _0x20edf0(_0xee8c1b)), _0x4149da(_0xee8c1b, _0x26eea9, _0x548d2a)), _0x2ed972[_0x5cb723]), _0x3058f3[_0x5cb723]);
+        _0x47da18 = _0x3f6578(_0x2447b8(_0x536e12), _0x1013f8(_0x536e12, _0x1ea553, _0x22eb7b));
+        _0x44c5da = _0x548d2a;
+        _0x548d2a = _0x26eea9;
+        _0x26eea9 = _0xee8c1b;
+        _0xee8c1b = _0x3f6578(_0x152bc6, _0x42105d);
+        _0x152bc6 = _0x22eb7b;
+        _0x22eb7b = _0x1ea553;
+        _0x1ea553 = _0x536e12;
+        _0x536e12 = _0x3f6578(_0x42105d, _0x47da18);
+      }
+      _0xdc94e9[0] = _0x3f6578(_0x536e12, _0xdc94e9[0]);
+      _0xdc94e9[1] = _0x3f6578(_0x1ea553, _0xdc94e9[1]);
+      _0xdc94e9[2] = _0x3f6578(_0x22eb7b, _0xdc94e9[2]);
+      _0xdc94e9[3] = _0x3f6578(_0x152bc6, _0xdc94e9[3]);
+      _0xdc94e9[4] = _0x3f6578(_0xee8c1b, _0xdc94e9[4]);
+      _0xdc94e9[5] = _0x3f6578(_0x26eea9, _0xdc94e9[5]);
+      _0xdc94e9[6] = _0x3f6578(_0x548d2a, _0xdc94e9[6]);
+      _0xdc94e9[7] = _0x3f6578(_0x44c5da, _0xdc94e9[7]);
+    }
+    var _0x13ff49;
+    return _0xdc94e9;
+  }(function (_0x5b3780) {
+    const _0x5da6ab = [],
+      _0x21dc50 = (1 << _0x3f01bf) - 1;
+    for (let _0x16ecac = 0; _0x16ecac < _0x5b3780.length * _0x3f01bf; _0x16ecac += _0x3f01bf) {
+      _0x5da6ab[_0x16ecac >> 5] |= (_0x5b3780.charCodeAt(_0x16ecac / _0x3f01bf) & _0x21dc50) << 24 - _0x16ecac % 32;
+    }
+    return _0x5da6ab;
+  }(_0x433876 = function (_0x3608ea) {
+    _0x3608ea = _0x3608ea.replace(/\r\n/g, "\n");
+    let _0x5527a4 = "";
+    for (let _0x1e387d = 0; _0x1e387d < _0x3608ea.length; _0x1e387d++) {
+      const _0xf26e29 = _0x3608ea.charCodeAt(_0x1e387d);
+      _0xf26e29 < 128 ? _0x5527a4 += String.fromCharCode(_0xf26e29) : _0xf26e29 > 127 && _0xf26e29 < 2048 ? (_0x5527a4 += String.fromCharCode(_0xf26e29 >> 6 | 192), _0x5527a4 += String.fromCharCode(63 & _0xf26e29 | 128)) : (_0x5527a4 += String.fromCharCode(_0xf26e29 >> 12 | 224), _0x5527a4 += String.fromCharCode(_0xf26e29 >> 6 & 63 | 128), _0x5527a4 += String.fromCharCode(63 & _0xf26e29 | 128));
+    }
+    return _0x5527a4;
+  }(_0x433876)), _0x433876.length * _0x3f01bf));
+}
+function MD5Encrypt(_0x460479) {
+  function _0xf082ac(_0x47a86f, _0x966a0) {
+    return _0x47a86f << _0x966a0 | _0x47a86f >>> 32 - _0x966a0;
+  }
+  function _0x32edb0(_0x5dd972, _0x38f5d2) {
+    var _0x4008d3, _0x1ff6a5, _0x1365e8, _0x2d128a, _0x1ebc31;
+    _0x1365e8 = 2147483648 & _0x5dd972;
+    _0x2d128a = 2147483648 & _0x38f5d2;
+    _0x4008d3 = 1073741824 & _0x5dd972;
+    _0x1ff6a5 = 1073741824 & _0x38f5d2;
+    _0x1ebc31 = (1073741823 & _0x5dd972) + (1073741823 & _0x38f5d2);
+    return _0x4008d3 & _0x1ff6a5 ? 2147483648 ^ _0x1ebc31 ^ _0x1365e8 ^ _0x2d128a : _0x4008d3 | _0x1ff6a5 ? 1073741824 & _0x1ebc31 ? 3221225472 ^ _0x1ebc31 ^ _0x1365e8 ^ _0x2d128a : 1073741824 ^ _0x1ebc31 ^ _0x1365e8 ^ _0x2d128a : _0x1ebc31 ^ _0x1365e8 ^ _0x2d128a;
+  }
+  function _0xe0c93b(_0x23b6a5, _0x5033f7, _0xf6be8e, _0x372769, _0x3e3883, _0x927ea0, _0x25d38f) {
+    var _0xe17a3, _0x436c7b;
+    _0x23b6a5 = _0x32edb0(_0x23b6a5, _0x32edb0(_0x32edb0((_0xe17a3 = _0x5033f7) & (_0x436c7b = _0xf6be8e) | ~_0xe17a3 & _0x372769, _0x3e3883), _0x25d38f));
+    return _0x32edb0(_0xf082ac(_0x23b6a5, _0x927ea0), _0x5033f7);
+  }
+  function _0x1c2e59(_0x22cac6, _0x244e9f, _0x1701e2, _0x55d174, _0x2b8776, _0x56513c, _0x518454) {
+    var _0x5e140a, _0x4af6ea, _0xa51de;
+    _0x22cac6 = _0x32edb0(_0x22cac6, _0x32edb0(_0x32edb0((_0x5e140a = _0x244e9f, _0x4af6ea = _0x1701e2, _0x5e140a & (_0xa51de = _0x55d174) | _0x4af6ea & ~_0xa51de), _0x2b8776), _0x518454));
+    return _0x32edb0(_0xf082ac(_0x22cac6, _0x56513c), _0x244e9f);
+  }
+  function _0x5e88(_0x446a25, _0x5d47c4, _0xf0dbf4, _0x2d4998, _0x351286, _0x4e8f60, _0x2866c8) {
+    var _0x3eecb1, _0x492c27;
+    _0x446a25 = _0x32edb0(_0x446a25, _0x32edb0(_0x32edb0((_0x3eecb1 = _0x5d47c4) ^ (_0x492c27 = _0xf0dbf4) ^ _0x2d4998, _0x351286), _0x2866c8));
+    return _0x32edb0(_0xf082ac(_0x446a25, _0x4e8f60), _0x5d47c4);
+  }
+  function _0x3f710b(_0x963838, _0xd7c797, _0x4551d9, _0x3b5012, _0x4200fa, _0x321f32, _0xcdcb48) {
+    var _0x1079fb, _0x28fe77;
+    _0x963838 = _0x32edb0(_0x963838, _0x32edb0(_0x32edb0((_0x1079fb = _0xd7c797, (_0x28fe77 = _0x4551d9) ^ (_0x1079fb | ~_0x3b5012)), _0x4200fa), _0xcdcb48));
+    return _0x32edb0(_0xf082ac(_0x963838, _0x321f32), _0xd7c797);
+  }
+  function _0x8b416f(_0x2707ef) {
+    var _0x291ba8,
+      _0x3af013 = "",
+      _0x15e10c = "";
+    for (_0x291ba8 = 0; 3 >= _0x291ba8; _0x291ba8++) {
+      _0x3af013 += (_0x15e10c = "0" + (_0x2707ef >>> 8 * _0x291ba8 & 255).toString(16)).substr(_0x15e10c.length - 2, 2);
+    }
+    return _0x3af013;
+  }
+  var _0x1e9261,
+    _0x5724aa,
+    _0x52cae9,
+    _0xff8bc9,
+    _0x4ddfe2,
+    _0x4faf2c,
+    _0x4a1720,
+    _0x196f4b,
+    _0x1e133a,
+    _0x2b4a15 = [];
+  for (_0x2b4a15 = function (_0x84d610) {
+    for (var _0x290498, _0x576ef9 = _0x84d610.length, _0x59fbf6 = _0x576ef9 + 8, _0x2f4aed = 16 * ((_0x59fbf6 - _0x59fbf6 % 64) / 64 + 1), _0x5c8b48 = Array(_0x2f4aed - 1), _0x272406 = 0, _0x19f796 = 0; _0x576ef9 > _0x19f796;) {
+      _0x290498 = (_0x19f796 - _0x19f796 % 4) / 4;
+      _0x272406 = _0x19f796 % 4 * 8;
+      _0x5c8b48[_0x290498] = _0x5c8b48[_0x290498] | _0x84d610.charCodeAt(_0x19f796) << _0x272406;
+      _0x19f796++;
+    }
+    _0x290498 = (_0x19f796 - _0x19f796 % 4) / 4;
+    _0x272406 = _0x19f796 % 4 * 8;
+    _0x5c8b48[_0x290498] = _0x5c8b48[_0x290498] | 128 << _0x272406;
+    _0x5c8b48[_0x2f4aed - 2] = _0x576ef9 << 3;
+    _0x5c8b48[_0x2f4aed - 1] = _0x576ef9 >>> 29;
+    return _0x5c8b48;
+  }(_0x460479 = function (_0x4dbe9c) {
+    _0x4dbe9c = _0x4dbe9c.replace(/\r\n/g, "\n");
+    for (var _0x3eb6fc = "", _0x5d1ba1 = 0; _0x5d1ba1 < _0x4dbe9c.length; _0x5d1ba1++) {
+      var _0x49a14d = _0x4dbe9c.charCodeAt(_0x5d1ba1);
+      128 > _0x49a14d ? _0x3eb6fc += String.fromCharCode(_0x49a14d) : _0x49a14d > 127 && 2048 > _0x49a14d ? (_0x3eb6fc += String.fromCharCode(_0x49a14d >> 6 | 192), _0x3eb6fc += String.fromCharCode(63 & _0x49a14d | 128)) : (_0x3eb6fc += String.fromCharCode(_0x49a14d >> 12 | 224), _0x3eb6fc += String.fromCharCode(_0x49a14d >> 6 & 63 | 128), _0x3eb6fc += String.fromCharCode(63 & _0x49a14d | 128));
+    }
+    return _0x3eb6fc;
+  }(_0x460479)), _0x4faf2c = 1732584193, _0x4a1720 = 4023233417, _0x196f4b = 2562383102, _0x1e133a = 271733878, _0x1e9261 = 0; _0x1e9261 < _0x2b4a15.length; _0x1e9261 += 16) {
+    _0x5724aa = _0x4faf2c;
+    _0x52cae9 = _0x4a1720;
+    _0xff8bc9 = _0x196f4b;
+    _0x4ddfe2 = _0x1e133a;
+    _0x4faf2c = _0xe0c93b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 0], 7, 3614090360);
+    _0x1e133a = _0xe0c93b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 1], 12, 3905402710);
+    _0x196f4b = _0xe0c93b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 2], 17, 606105819);
+    _0x4a1720 = _0xe0c93b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 3], 22, 3250441966);
+    _0x4faf2c = _0xe0c93b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 4], 7, 4118548399);
+    _0x1e133a = _0xe0c93b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 5], 12, 1200080426);
+    _0x196f4b = _0xe0c93b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 6], 17, 2821735955);
+    _0x4a1720 = _0xe0c93b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 7], 22, 4249261313);
+    _0x4faf2c = _0xe0c93b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 8], 7, 1770035416);
+    _0x1e133a = _0xe0c93b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 9], 12, 2336552879);
+    _0x196f4b = _0xe0c93b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 10], 17, 4294925233);
+    _0x4a1720 = _0xe0c93b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 11], 22, 2304563134);
+    _0x4faf2c = _0xe0c93b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 12], 7, 1804603682);
+    _0x1e133a = _0xe0c93b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 13], 12, 4254626195);
+    _0x196f4b = _0xe0c93b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 14], 17, 2792965006);
+    _0x4a1720 = _0xe0c93b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 15], 22, 1236535329);
+    _0x4faf2c = _0x1c2e59(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 1], 5, 4129170786);
+    _0x1e133a = _0x1c2e59(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 6], 9, 3225465664);
+    _0x196f4b = _0x1c2e59(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 11], 14, 643717713);
+    _0x4a1720 = _0x1c2e59(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 0], 20, 3921069994);
+    _0x4faf2c = _0x1c2e59(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 5], 5, 3593408605);
+    _0x1e133a = _0x1c2e59(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 10], 9, 38016083);
+    _0x196f4b = _0x1c2e59(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 15], 14, 3634488961);
+    _0x4a1720 = _0x1c2e59(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 4], 20, 3889429448);
+    _0x4faf2c = _0x1c2e59(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 9], 5, 568446438);
+    _0x1e133a = _0x1c2e59(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 14], 9, 3275163606);
+    _0x196f4b = _0x1c2e59(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 3], 14, 4107603335);
+    _0x4a1720 = _0x1c2e59(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 8], 20, 1163531501);
+    _0x4faf2c = _0x1c2e59(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 13], 5, 2850285829);
+    _0x1e133a = _0x1c2e59(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 2], 9, 4243563512);
+    _0x196f4b = _0x1c2e59(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 7], 14, 1735328473);
+    _0x4a1720 = _0x1c2e59(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 12], 20, 2368359562);
+    _0x4faf2c = _0x5e88(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 5], 4, 4294588738);
+    _0x1e133a = _0x5e88(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 8], 11, 2272392833);
+    _0x196f4b = _0x5e88(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 11], 16, 1839030562);
+    _0x4a1720 = _0x5e88(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 14], 23, 4259657740);
+    _0x4faf2c = _0x5e88(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 1], 4, 2763975236);
+    _0x1e133a = _0x5e88(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 4], 11, 1272893353);
+    _0x196f4b = _0x5e88(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 7], 16, 4139469664);
+    _0x4a1720 = _0x5e88(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 10], 23, 3200236656);
+    _0x4faf2c = _0x5e88(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 13], 4, 681279174);
+    _0x1e133a = _0x5e88(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 0], 11, 3936430074);
+    _0x196f4b = _0x5e88(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 3], 16, 3572445317);
+    _0x4a1720 = _0x5e88(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 6], 23, 76029189);
+    _0x4faf2c = _0x5e88(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 9], 4, 3654602809);
+    _0x1e133a = _0x5e88(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 12], 11, 3873151461);
+    _0x196f4b = _0x5e88(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 15], 16, 530742520);
+    _0x4a1720 = _0x5e88(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 2], 23, 3299628645);
+    _0x4faf2c = _0x3f710b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 0], 6, 4096336452);
+    _0x1e133a = _0x3f710b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 7], 10, 1126891415);
+    _0x196f4b = _0x3f710b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 14], 15, 2878612391);
+    _0x4a1720 = _0x3f710b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 5], 21, 4237533241);
+    _0x4faf2c = _0x3f710b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 12], 6, 1700485571);
+    _0x1e133a = _0x3f710b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 3], 10, 2399980690);
+    _0x196f4b = _0x3f710b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 10], 15, 4293915773);
+    _0x4a1720 = _0x3f710b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 1], 21, 2240044497);
+    _0x4faf2c = _0x3f710b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 8], 6, 1873313359);
+    _0x1e133a = _0x3f710b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 15], 10, 4264355552);
+    _0x196f4b = _0x3f710b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 6], 15, 2734768916);
+    _0x4a1720 = _0x3f710b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 13], 21, 1309151649);
+    _0x4faf2c = _0x3f710b(_0x4faf2c, _0x4a1720, _0x196f4b, _0x1e133a, _0x2b4a15[_0x1e9261 + 4], 6, 4149444226);
+    _0x1e133a = _0x3f710b(_0x1e133a, _0x4faf2c, _0x4a1720, _0x196f4b, _0x2b4a15[_0x1e9261 + 11], 10, 3174756917);
+    _0x196f4b = _0x3f710b(_0x196f4b, _0x1e133a, _0x4faf2c, _0x4a1720, _0x2b4a15[_0x1e9261 + 2], 15, 718787259);
+    _0x4a1720 = _0x3f710b(_0x4a1720, _0x196f4b, _0x1e133a, _0x4faf2c, _0x2b4a15[_0x1e9261 + 9], 21, 3951481745);
+    _0x4faf2c = _0x32edb0(_0x4faf2c, _0x5724aa);
+    _0x4a1720 = _0x32edb0(_0x4a1720, _0x52cae9);
+    _0x196f4b = _0x32edb0(_0x196f4b, _0xff8bc9);
+    _0x1e133a = _0x32edb0(_0x1e133a, _0x4ddfe2);
+  }
+  return (_0x8b416f(_0x4faf2c) + _0x8b416f(_0x4a1720) + _0x8b416f(_0x196f4b) + _0x8b416f(_0x1e133a)).toLowerCase();
+}
